@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Interactive Directory</title>
+    </head>
+    <body>
+        <h1>Interactive Directory</h1>
+
+        <div id="wrapper">
+            <h3>Search:</h3>
+            <input type="text" id="search">
+
+            <div id="filters">
+            </div>
+
+            <div id="count"></div>
+
+            <ul id="listing">
+            </ul>
+        </div>
+
+        <script type="text/template" id="person-template">
+            <span class="list-header"><%= firstname %> <%= lastname %></span>
+            <div class="details">
+                Phone: <%= homephone %> <br>
+                Email: <a href="mailto:<%= email %>"><%= email %></a>
+            </div>
+        </script>
+
+        <script src="js/data.json" charset="utf-8"></script>
+        <script src="js/dist/jquery.js" charset="utf-8"></script>
+        <script src="js/dist/underscore.js" charset="utf-8"></script>
+        <script src="js/dist/backbone.js" charset="utf-8"></script>
+
+        <script src="js/routers/routers.js" charset="utf-8"></script>
+        <script src="js/models/person-model.js" charset="utf-8"></script>
+        <script src="js/views/person-view.js" charset="utf-8"></script>
+        <script src="js/app.js" charset="utf-8"></script>
+    </body>
+</html>
